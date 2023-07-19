@@ -90,15 +90,20 @@ export default function DailyQuests() {
             priority
           />
 
-          {/* todo fix line */}
-          <Image
-            className=" absolute right-[0px]  top-[25px]"
-            src="/quest2-line.svg"
-            alt="quest2"
-            width={94}
-            height={89}
-            priority
-          />
+          <div className="absolute " style={{ top: '23px', right: "-5px" }}>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="94" height="89" viewBox="0 0 94 89" fill="none">
+              <g clip-path="url(#clip0_1_301)">
+                <circle cx="18.8047" cy="72.206" r="68.5" transform="rotate(-180 18.8047 72.206)" stroke="white" stroke-width="2" />
+              </g>
+              <defs>
+                <clipPath id="clip0_1_301">
+                  <rect width="94" height="89" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+
           <div className="absolute top-[31px] left-1/2 -translate-x-1/2 bg-[#fff] w-[123px] h-[123px]  rounded-full">
             <div className="absolute  left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
               <p className="w-[71px] text-[var(--color-dark-bg,#030303)] text-center font-next-book text-[14px] font-normal text-base leading-[110%]">
@@ -144,15 +149,19 @@ export default function DailyQuests() {
             priority
           />
 
-          {/* todo fix line */}
-          <Image
-            className=" absolute right-[0px]  top-[25px]"
-            src="/quest2-line.svg"
-            alt="quest2"
-            width={94}
-            height={89}
-            priority
-          />
+          <div className="absolute top-0 right-0" style={{ top: '21px', right: "-3px" }}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="85" height="62" viewBox="0 0 85 62" fill="none">
+              <g clip-path="url(#clip0_1_289)">
+                <circle cx="13.3981" cy="73.4069" r="67.3981" stroke="white" stroke-width="2" />
+              </g>
+              <defs>
+                <clipPath id="clip0_1_289">
+                  <rect width="84.3647" height="60.93" fill="white" transform="translate(0.117188 0.758789)" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+
           <div className="absolute top-[31px] left-1/2 -translate-x-1/2 w-[123px] h-[123px]  rounded-full">
             <div className="absolute  left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
               <p className="w-[71px] text-[#EDEDED] text-center font-next-book text-[14px] font-normal text-base leading-[110%]">
