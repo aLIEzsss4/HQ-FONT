@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function DailyQuests() {
   return (
-    <div className="w-[1083px] h-[221px] flex-shrink-0 rounded-lg bg-[#101010]  flex">
+    <div className="w-[1083px] h-[221px] flex-shrink-0 rounded-[16px] bg-[#101010]  flex">
       <div className="relative h-[100%] w-[188px]">
         <Image
           className="absolute  left-0 z--10"
@@ -112,7 +112,7 @@ export default function DailyQuests() {
               height={20}
               priority
             />
-            <p className="text-[#EDEDED] text-center font-next-book text-[14px] font-normal  leading-[110%]">
+            <p className="text-[#EDEDED] h-[20px] leading-5 text-center font-next-book text-[14px] font-normal  ">
               5
             </p>
           </div>
@@ -171,7 +171,7 @@ export default function DailyQuests() {
               height={20}
               priority
             />
-            <p className="text-[#EDEDED] text-center font-next-book text-[14px] font-normal  leading-[110%]">
+            <p className="text-[#EDEDED] text-center font-next-book text-[14px] font-normal h-[20px] leading-5 ">
               10
             </p>
           </div>
@@ -229,7 +229,7 @@ export default function DailyQuests() {
               height={20}
               priority
             />
-            <p className="text-[#EDEDED] text-center font-next-book text-[14px] font-normal  leading-[110%]">
+            <p className="text-[#EDEDED] text-center font-next-book text-[14px] font-normal  h-[20px] leading-5 ">
               25
             </p>
           </div>
@@ -249,8 +249,6 @@ export default function DailyQuests() {
         </div>
 
       </div>
-
-
 
 
     </div>

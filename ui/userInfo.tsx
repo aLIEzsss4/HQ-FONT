@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function UserInfo() {
   return (
-    <div className="w-[345px] h-[560px] flex-shrink-0 rounded-lg bg-[#202020]">
+    <div className="w-[345px] h-[560px] flex-shrink-0 rounded-[16px] bg-[#202020]">
 
       {/* top */}
       <div className="flex flex-col items-center mt-[37px]">
@@ -28,7 +28,7 @@ export default function UserInfo() {
           <p className="text-[#EDEDED] font-next-book text-[13px] font-normal text-base leading-[100%] ">
             Level 3
           </p>
-          <div className=" ml-auto relative w-[20px] h-[20px] flex content-center justify-center items-center">
+          <div className=" ml-auto relative w-[20px] h-[20px] flex content-center justify-center items-center  cursor-help">
             <Image
               className="absolute inset-0"
               src="/svgs/question.svg"
@@ -36,7 +36,7 @@ export default function UserInfo() {
               width={20}
               height={20}
             />
-            <p className="text-[#828282] text-center font-next-book text-[11.55px] font-normal text-base  leading-[100%] relative">
+            <p className="text-[#828282] text-center font-next-book text-[11.55px] font-normal text-base  leading-[100%] relative ">
               ?
             </p>
           </div>
@@ -51,7 +51,7 @@ export default function UserInfo() {
               Today's XP
             </p>
 
-            <p className="text-[#EDEDED] font-next-book text-[16px] font-bold leading-[100%]">
+            <p className="text-[#EDEDED] font-next-book text-[16px] font-bold leading-[100%] mt-[12px]">
               50
             </p>
           </div>
@@ -69,7 +69,7 @@ export default function UserInfo() {
               Total XP
             </p>
 
-            <p className="text-[#EDEDED] font-next-book text-[16px] font-bold leading-[100%]">
+            <p className="text-[#EDEDED] font-next-book text-[16px] font-bold leading-[100%] mt-[12px]">
               750/800
             </p>
           </div>

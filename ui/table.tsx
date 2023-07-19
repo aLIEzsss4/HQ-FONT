@@ -1,39 +1,41 @@
 import Image from 'next/image'
 
 interface ITableData {
-  syntax: number,
+  total: number,
   conin: number,
   width: number,
-  schedule: string,
+  finished: number,
   canClaim: boolean
 }
 
-const TableData: ITableData[] = [
+const originalData: ITableData[] = [
   {
-    syntax: 3,
+    total: 3,
     conin: 25,
     width: 108,
-    schedule: '1/3',
+    finished: 1,
     canClaim: true,
   },
   {
-    syntax: 6,
+    total: 6,
     conin: 60,
     width: 61,
-    schedule: '1/6',
+    finished: 1,
     canClaim: false,
   },
   {
-    syntax: 10,
+    total: 10,
     conin: 120,
     width: 39,
-    schedule: '1/10',
+    finished: 1,
     canClaim: false,
   }
 ]
 
+const TableData: ITableData[] = Array.from({ length: 9 }, (_, index) => originalData[index % originalData.length]);
+
 const Col = (props: ITableData) => {
-  const { syntax, conin, width, schedule, canClaim } = props
+  const { total, conin, width, finished, canClaim } = props
   return (
     <div className="mb-[12px] w-[1000px] h-[52px] flex-shrink-0   rounded-[16px]  bg-[#202020] flex items-center">
       <div>
@@ -43,7 +45,7 @@ const Col = (props: ITableData) => {
         </svg>
       </div>
       <p className="ml-[17px] w-[200px] text-white font-next-book text-sm font-normal leading-[120%]">
-        Complete {syntax} Syntax
+        Complete {total} Syntax
       </p>
       <Image
         className=""
@@ -65,7 +67,7 @@ const Col = (props: ITableData) => {
 
       </div>
       <p className="ml-[12px] text-white font-next-book text-sm font-normal leading-[120%]">
-        {schedule}
+        {finished}/{total}
       </p>
       {canClaim ?
         <button
@@ -79,7 +81,6 @@ const Col = (props: ITableData) => {
         >
           Start Learning
         </button>
-
       }
 
 
@@ -95,7 +96,7 @@ export default function Table() {
 
 
   return (
-    <div className="w-[1083px] h-[328px] mt-3 flex-shrink-0 rounded-lg bg-[#101010]">
+    <div className="w-[1083px] h-[328px] mt-3 flex-shrink-0 rounded-[16px] bg-[#101010]">
       <div className="flex  mt-[40px]">
         <div className="  ml-[28px] w-146 text-gray-300 font-next-book text-16  font-bold leading-110">
           Milestones
@@ -129,12 +130,22 @@ export default function Table() {
 
       </div>
 
-      <div className="mt-[32px] ml-[26px]">
-        {TableData.map(item => <Col {...item} />)}
-
-
-
+      <div className="relative">
+        <div className="mt-[32px] ml-[26px]  h-[180px] overflow-hidden  overflow-y-auto">
+          {TableData.map(item => <Col {...item} />)}
+        </div>
+        <div className="absolute bottom-0 left-[0px]">
+          <Image
+            className=""
+            src="/svgs/tablebom.svg"
+            alt="tablebom"
+            width={1083}
+            height={30}
+            priority
+          />
+        </div>
       </div>
+
     </div>
   )
 }
