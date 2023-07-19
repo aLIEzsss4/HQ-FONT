@@ -60,28 +60,28 @@ const Col = (props: ITableData) => {
         <svg xmlns="http://www.w3.org/2000/svg" width="275" height="12" viewBox="0 0 275 12" fill="none">
           <path d="M0 6C0 2.68629 2.68629 0 6 0H269C272.314 0 275 2.68629 275 6C275 9.31371 272.314 12 269 12H5.99999C2.68629 12 0 9.31371 0 6Z" fill="#505050" />
         </svg>
-        <div className={` absolute top-[1px] left-[1px] bg-[#F2F2F2] h-[10px] rounded-[16px]`} style={{width}}>
+        <div className={` absolute top-[1px] left-[1px] bg-[#F2F2F2] h-[10px] rounded-[16px]`} style={{ width }}>
         </div >
 
       </div>
       <p className="ml-[12px] text-white font-next-book text-sm font-normal leading-[120%]">
         {schedule}
       </p>
-      {canClaim?
-      <button
-      className=" ml-auto mr-[6px] w-[89px] h-[40px] flex-shrink-0 rounded-[12px] bg-white text-black text-center font-next-book text-sm font-normal leading-tight"
-    >
-      Claim
-    </button>
-    :<button
-    className=" ml-auto mr-[6px] w-[143px] h-[40px] flex-shrink-0 rounded-[12px] bg-gradient-to-b from-[#353535] to-[#2E2E2E] 
+      {canClaim ?
+        <button
+          className=" ml-auto mr-[6px] w-[89px] h-[40px] flex-shrink-0 rounded-[12px] bg-white text-black text-center font-next-book text-sm font-normal leading-tight"
+        >
+          Claim
+        </button>
+        : <button
+          className=" ml-auto mr-[6px] w-[143px] h-[40px] flex-shrink-0 rounded-[12px] bg-gradient-to-b from-[#353535] to-[#2E2E2E] 
             text-[#EDEDED] text-center font-next-book text-sm font-normal leading-tight"
-  >
-    Start Learning
-  </button>
-    
-    }
-      
+        >
+          Start Learning
+        </button>
+
+      }
+
 
     </div>
   )
