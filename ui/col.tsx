@@ -4,14 +4,14 @@ import { ITableData } from './table'
 
 interface ICol extends ITableData {
   sectionRefs: React.MutableRefObject<HTMLDivElement[]>,
+  index?:number
 }
 
 const Col = (props: ICol) => {
-  const { total, conin, width, finished, canClaim, sectionRefs, section } = props
-  console.log({section})
+  const { total, conin, width, finished, canClaim, sectionRefs, section,index } = props
 
   return (
-    <div ref={el => sectionRefs.current[section] = el} className="mb-[12px] w-[1000px] h-[52px] flex-shrink-0   rounded-[16px]  bg-[#202020] flex items-center">
+    <div ref={el => sectionRefs.current[index] = el} className="mb-[12px] w-[1000px] h-[52px] flex-shrink-0   rounded-[16px]  bg-[#202020] flex items-center">
       <div>
         <svg xmlns="http://www.w3.org/2000/svg" width="162" height="53" viewBox="0 0 162 53" fill="none">
           <path d="M0 20C0 8.95431 8.9543 0 20 0H161.5L147.255 53H20C8.95431 53 0 44.0457 0 33V20Z" fill="#292929" />
@@ -24,7 +24,7 @@ const Col = (props: ICol) => {
       <Image
         className=""
         src="/coin.png"
-        alt="coin"
+        alt="svgs/coin"
         width={20}
         height={20}
         priority

@@ -107,7 +107,7 @@ export default function DailyQuests() {
             <Image
               className="mr-2"
               src="/coin.png"
-              alt="coin"
+              alt="svgs/coin"
               width={20}
               height={20}
               priority
@@ -166,7 +166,7 @@ export default function DailyQuests() {
             <Image
               className="mr-2"
               src="/coin.png"
-              alt="coin"
+              alt="svgs/coin"
               width={20}
               height={20}
               priority
@@ -224,7 +224,7 @@ export default function DailyQuests() {
             <Image
               className="mr-2"
               src="/coin.png"
-              alt="coin"
+              alt="svgs/coin"
               width={20}
               height={20}
               priority

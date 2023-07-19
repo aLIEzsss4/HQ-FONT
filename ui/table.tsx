@@ -44,11 +44,12 @@ const originalData: originalData[] = [
 ]
 
 const TableData: ITableData[] = Array.from({ length: 9 }, (_, index) => {
-  const item = originalData[index % originalData.length];
+  const item:originalData = originalData[index % originalData.length];
 
   return {
     ...item,
-    section: Math.floor(index / 3)
+    section: Math.floor(index / 3),
+    index
   }
 })
 
@@ -60,7 +61,7 @@ export default function Table() {
 
   const tabsRef = useRef<HTMLDivElement>(null);
 
-  const { activeTab, setActiveTab, sectionRefs } = useNavigation(tabsRef, TableData);
+  const { activeTab, handleTabClick, sectionRefs } = useNavigation(tabsRef, TableData);
 
 
   return (
@@ -69,8 +70,8 @@ export default function Table() {
         <div className="  ml-[28px] w-146 text-gray-300 font-next-book text-16  font-bold leading-110">
           Milestones
         </div>
-        <div className="ml-auto" ref={tabsRef}>
-          <TabNav active={activeTab} setActive={setActiveTab} tabs={tabs} />
+        <div className="ml-auto" >
+          <TabNav active={activeTab} setActive={handleTabClick} tabs={tabs} />
           <div>
             <Image
               className="mt-[1px]"
@@ -86,8 +87,8 @@ export default function Table() {
       </div>
 
       <div className="relative">
-        <div className="mt-[32px] ml-[26px]  h-[180px] overflow-hidden  overflow-y-auto">
-          {TableData.map(item => <Col {...item} sectionRefs={sectionRefs} />)}
+        <div className="mt-[32px] ml-[26px]  h-[180px] overflow-hidden  overflow-y-auto" ref={tabsRef}>
+          {TableData.map((item) => <Col {...item} sectionRefs={sectionRefs}  />)}
         </div>
         <div className="absolute bottom-0 left-[0px]">
           <Image
